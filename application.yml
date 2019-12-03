@@ -1,6 +1,17 @@
-server:
+pring:
   port: 9002
-
-eureka:  client:    register-with-eureka: true
-    service-url:       defaultZone : http://localhost:7001/eureka/ #服务中心的地址
-spring:  application:    name: service-feign       
+  application:
+    name: service-feign
+  profiles: 
+    active: 
+      - dev
+--- 
+spring: 
+  profiles: dev
+  application: 
+    name: config-server-dev 
+--- 
+spring: 
+  profiles: test
+  application: 
+    name: config-server-test      
