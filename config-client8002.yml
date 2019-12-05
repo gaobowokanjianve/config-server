@@ -18,7 +18,5 @@ spring:
     url: jdbc:mysql://39.107.44.147/demoDb?useUnicode=true&characterEncoding=UTF-8&useSSL=false
   profiles: dev
   application: 
-    name: config-client-dev      
-           
-  
+    name: config-client-dev
   
