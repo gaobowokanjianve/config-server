@@ -18,21 +18,7 @@ spring:
     url: jdbc:mysql://39.107.44.147/demoDb?useUnicode=true&characterEncoding=UTF-8&useSSL=false
   profiles: dev
   application: 
-    name: config-client-dev 
-
-mybatis:
-  mapper-locations: classpath*:mapper/*Mapper.xml 
-  
-
-pagehelper:
-  helper-dialect: mysql
-  reasonable: true
-  support-methods-arguments: true
-  params: count=countSql      
-  
-eureka:  client:    service-url:      defaultZone : http://localhost:7001/eureka 
-    instance:
-    instance-id: demo8002
-    prefer-ip-address: true           
+    name: config-client-dev      
+           
   
   
