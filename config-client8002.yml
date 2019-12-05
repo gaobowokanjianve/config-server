@@ -1,3 +1,13 @@
+pring:
+  port: 9002
+  application:
+    name: config-client
+  profiles: 
+    active: 
+      - dev
+---
+
+
 server:
   port: 8002
 
@@ -6,8 +16,9 @@ spring:
     username: root
     password: msroot     
     url: jdbc:mysql://39.107.44.147/demoDb?useUnicode=true&characterEncoding=UTF-8&useSSL=false
-  application:    
-    name: providerSayhello 
+  profiles: dev
+  application: 
+    name: config-client-dev 
 
 mybatis:
   mapper-locations: classpath*:mapper/*Mapper.xml 
