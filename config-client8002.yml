@@ -1,4 +1,4 @@
-pring:
+spring:
   port: 9002
   application:
     name: config-client
