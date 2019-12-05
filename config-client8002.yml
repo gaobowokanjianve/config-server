@@ -1,22 +1,27 @@
-spring:
-  port: 9002
-  application:
-    name: config-client
+spring: 
   profiles: 
     active: 
-      - dev
+    - dev
 ---
-
-
-server:
-  port: 8002
-
-spring:
-  datasource:
-    username: root
-    password: msroot     
-    url: jdbc:mysql://39.107.44.147/demoDb?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+server: 
+  port: 8001
+spring: 
   profiles: dev
   application: 
-    name: config-client-dev
+    name: microservicecloud-config-client
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka-dv.com:7001/eureka/
+--- 
+server: 
+  port: 8002
+spring: 
+  profiles: test
+  application: 
+    name: microservicecloud-config-client
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka-test.com:7001/eureka/
   
